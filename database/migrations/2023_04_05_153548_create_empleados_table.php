@@ -33,13 +33,20 @@ return new class extends Migration
             $table->string('estado');
             $table->string('nom_sis');
             $table->string('num_suc');
+
             $table->string('id_regional');
+            $table->foreign('id_regional')->references('id')->on('regional');
+
             $table->string('id_sucursal');
+            $table->foreign('id_sucursal')->references('id')->on('sucursal');
+
             $table->string('id_empresa');
+            $table->foreign('id_empresa')->references('id')->on('empresa');
+
             $table->string('id_cargo');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('id_cargo')->references('id')->on('cargo');
+
+
             $table->timestamps();
         });
     }
