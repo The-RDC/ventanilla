@@ -13,6 +13,19 @@ return new class extends Migration
     {
         Schema::create('solicitud_vacaciones', function (Blueprint $table) {
             $table->id();
+
+            $table->string('fecha_solicitud');
+            $table->string('fecha_salida');
+            $table->string('fecha_retorno');
+            $table->string('aprobacion');
+            $table->string('observacion');
+
+            $table->string('id_empleado');
+            $table->foreign('id_empleado')->references('id')->on('empleado');
+
+            $table->string('id_autorizacion');
+            $table->foreign('id_autorizacion')->references('id')->on('empleado');
+
             $table->timestamps();
         });
     }

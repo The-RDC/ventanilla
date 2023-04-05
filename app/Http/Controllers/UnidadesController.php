@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\regional;
-use App\Http\Requests\StoreregionalRequest;
-use App\Http\Requests\UpdateregionalRequest;
+use App\Models\unidades;
+use App\Http\Requests\StoreunidadesRequest;
+use App\Http\Requests\UpdateunidadesRequest;
 
-class RegionalController extends Controller
+class UnidadesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class RegionalController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreregionalRequest $request)
+    public function store(StoreunidadesRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class RegionalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(regional $regional)
+    public function show(unidades $unidades)
     {
         //
     }
@@ -43,7 +43,7 @@ class RegionalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(regional $regional)
+    public function edit(unidades $unidades)
     {
         //
     }
@@ -51,7 +51,7 @@ class RegionalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateregionalRequest $request, regional $regional)
+    public function update(UpdateunidadesRequest $request, unidades $unidades)
     {
         //
     }
@@ -59,7 +59,7 @@ class RegionalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(regional $regional)
+    public function destroy(unidades $unidades)
     {
         //
     }

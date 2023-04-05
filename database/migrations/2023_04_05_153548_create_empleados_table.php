@@ -13,38 +13,40 @@ return new class extends Migration
     {
         Schema::create('empleados', function (Blueprint $table) {
             $table->id();
+
             $table->string('nombres')->unique();
             $table->string('ap_paterno');
             $table->string('ap_materno');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->string('nacionalidad');
             $table->string('nro_documento');
             $table->string('tipo_documento');
             $table->string('ext_visa_laboral');
-            $table->string('email_personal');
-            $table->string('email_institucional');
-            $table->string('fecha_nacimiento');
+            $table->string('email_personal')->nullable();
+            $table->string('email_institucional')->nullable();
+            $table->date('fecha_nacimiento');
             $table->string('genero');
-            $table->string('estado_civil');
+            $table->string('estado_civil')->nullable();
             $table->string('telf_celular');
-            $table->string('telf_fijo');
-            $table->string('direccion');
+            $table->string('telf_fijo')->nullable();
+            $table->string('direccion')->nullable();
             $table->string('estado_registro');
             $table->string('estado');
-            $table->string('nom_sis');
-            $table->string('num_suc');
+            $table->string('nom_sis')->nullable();
+            $table->string('num_suc')->nullable();
 
             $table->string('id_regional');
-            $table->foreign('id_regional')->references('id')->on('regional');
+            $table->foreign('id_regional')->references('id')->on('regionales');
 
             $table->string('id_sucursal');
-            $table->foreign('id_sucursal')->references('id')->on('sucursal');
+            $table->foreign('id_sucursal')->references('id')->on('sucursales');
 
             $table->string('id_empresa');
-            $table->foreign('id_empresa')->references('id')->on('empresa');
+            $table->foreign('id_empresa')->references('id')->on('empresas');
 
             $table->string('id_cargo');
-            $table->foreign('id_cargo')->references('id')->on('cargo');
+            $table->foreign('id_cargo')->references('id')->on('cargos');
+
 
 
             $table->timestamps();

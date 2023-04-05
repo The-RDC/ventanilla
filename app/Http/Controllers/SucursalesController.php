@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\sucursal;
-use App\Http\Requests\StoresucursalRequest;
-use App\Http\Requests\UpdatesucursalRequest;
+use App\Models\sucursales;
+use App\Http\Requests\StoresucursalesRequest;
+use App\Http\Requests\UpdatesucursalesRequest;
 
-class SucursalController extends Controller
+class SucursalesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class SucursalController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoresucursalRequest $request)
+    public function store(StoresucursalesRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class SucursalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(sucursal $sucursal)
+    public function show(sucursales $sucursales)
     {
         //
     }
@@ -43,7 +43,7 @@ class SucursalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(sucursal $sucursal)
+    public function edit(sucursales $sucursales)
     {
         //
     }
@@ -51,7 +51,7 @@ class SucursalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatesucursalRequest $request, sucursal $sucursal)
+    public function update(UpdatesucursalesRequest $request, sucursales $sucursales)
     {
         //
     }
@@ -59,7 +59,7 @@ class SucursalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(sucursal $sucursal)
+    public function destroy(sucursales $sucursales)
     {
         //
     }
